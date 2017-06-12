@@ -1,5 +1,5 @@
 import urllib.parse
-
+import os
 import requests
 
 TRELLO_API_URL = 'https://trello.com/1'
@@ -50,10 +50,10 @@ class App:
     def auth_url(self):
         params = {
             'callback_method': 'fragment',
-            'return_url': 'http://example.com/',
+            'return_url': os.environ.get('WEBHOOK_HOST_URL', 'https://www.google.com'),
             'scope': 'read',
             'expiration': 'never',
-            'name': 'Oxymeal Trello Bot',
+            'name': 'Telegram Trello Bot',
             'key': self.key,
         }
         return TRELLO_API_URL + '/authorize?' + urllib.parse.urlencode(params)
