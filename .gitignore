@@ -98,3 +98,5 @@ ENV/
 
 # Local dev files
 *.local*
+
+Dockerfile
