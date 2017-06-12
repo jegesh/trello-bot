@@ -31,15 +31,15 @@ This bot was developed with Python 3.5, though it may work on earlier versions.
   ```
   /auth
   ```
-    And follow the instructions the bot gives you.
+And follow the instructions the bot gives you.
 
 7. Setup the webhook:
 Send a POST request to this url:
 `https://api.trello.com/1/tokens/<auth token from previous step>/webhooks/` with the following request parameters:
-       - key=<your trello app key> (received at https://trello.com/app-key)
-       - callbackURL=<your server url>:9099/webhook_update/<your chat id>
-       - description=<write anything>
-       - idModel=<Trello id of object to receive notifications from> (not clear if this is actually necessary)
+ - key=<your trello app key> (received at https://trello.com/app-key)
+ - callbackURL=<your server url>:9099/webhook_update/<your chat id>
+ - description=<write anything>
+ - idModel=<Trello id of object to receive notifications from> (not clear if this is actually necessary)
 
 8. Add any boards you wish to receive notifications from, using the `/notify` command in the conversation with your bot.
 
