@@ -98,6 +98,3 @@ ENV/
 
 # Local dev files
 *.local*
-
-# Config
-config.py
